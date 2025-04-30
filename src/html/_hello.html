@@ -1,5 +1,22 @@
-<div class="container">
-    <h2>Пример подключения файла</h2>
-    <p>1 - При подключении картинок вместо полного пути указываем <code>@@img/</code> и он сам заменит на нужный путь</p>
-    <p>2 - При добавлении/удалении файлов шрифтов - удаляем файл <code>src/scss/fonts.scss</code> и GULP подключит все учитывая изменения</p>
+<div class="slider">
+  <div class="container">
+    <div class="slider__swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="slider__slide swiper-slide" style="background-image: url('/img/slide-1.jpeg')">
+          <p class="slider__first-text">Новинка <br><span style="color: #EF2626">BENDA</span>  </p>
+          <p class="slider__second-text">Napoleonbob <span style="color: #EF2626">250</span></p>
+        </div>
+        <div class="slider__slide swiper-slide" style="background-image: url('/img/slide-1.jpeg')">
+          <p class="slider__first-text">Новинка <br><span style="color: #EF2626">BENDA</span>  </p>
+          <p class="slider__second-text">Napoleonbob <span style="color: #EF2626">250</span></p>
+        </div>
+        <div class="slider__slide swiper-slide" style="background-image: url('/img/slide-1.jpeg')">
+          <p class="slider__first-text">Новинка <br><span style="color: #EF2626">BENDA</span>  </p>
+          <p class="slider__second-text">Napoleonbob <span style="color: #EF2626">250</span></p>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
 </div>

@@ -12,6 +12,9 @@
 
 @import '_header';
 @import '_footer';
+@import '_hello';
+@import '_common';
+@import '_catalog-slider';
 
 * {
   outline: none;
@@ -62,7 +65,6 @@ body {
 
   main {
     flex: 1 0 auto;
-    padding: 30px 0;
   }
 }
 

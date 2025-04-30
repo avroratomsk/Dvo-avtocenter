@@ -223,6 +223,7 @@
 .submenu {
   display: none;
   transition: $animation_speed;
+  z-index: 99;
 
   @media (hover: hover) {
     display: block;
