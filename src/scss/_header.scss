@@ -10,6 +10,15 @@
 
   &__bottom {
   }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $accent;
+    z-index: 99;
+  }
 }
 
 .header-top {
@@ -17,6 +26,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 150%;
+  margin-bottom: 24px;
   border-bottom: 1px solid rgba(207, 207, 207, 0.62);
 
   //.header-top__inner
@@ -125,7 +135,6 @@
 }
 
 .header-bottom {
-  margin-top: 24px;
 
   //.header-bottom__inner
   &__inner {
