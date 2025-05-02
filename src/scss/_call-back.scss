@@ -1,0 +1,49 @@
+.callback {
+  padding: 50px 0px;
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+  }
+
+  //.callback__image
+  &__image {
+  }
+
+  //.callback__content
+  &__content {
+
+  }
+
+  //.callback__body
+  &__body {
+  }
+
+  //.callback__title
+  &__title {
+  }
+
+  //.callback__form
+  &__form {
+    margin-bottom: 22px;
+  }
+
+  //.callback__socials
+  &__socials {
+  }
+
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  //.socials__link
+  &__link {
+  }
+}

@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  //.form__grid
+  &__grid {
+    display: flex;
+    gap: 20px;
+  }
+
+  //.form__group
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  //.form__label
+  &__label {
+    color: rgb(60, 60, 60);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+
+  //.form__inp
+  &__inp {
+    padding: 12px;
+    border: 1px solid rgba(180, 180, 180, 0.71);
+    background: rgb(244, 243, 243);
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+    font-weight: 400;
+
+    &:focus {
+      border-color: rgba(126, 125, 125, 0.71);
+    }
+  }
+
+  //.form__submit
+  &__submit {
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    background: rgb(239, 38, 38);
+  }
+}
