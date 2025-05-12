@@ -13,6 +13,10 @@
     display: grid;
     grid-template-columns: 108px 1fr 225px;
     gap: 20px;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 100%;
+    }
   }
 
   //.footer__logo
@@ -66,16 +70,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
+    margin-top: 50px;
     padding: 50px 0px;
     border-top: 1px solid #6B6B6B;
-    margin-top: 200px;
     color: #6B6B6B;
+
+    @media screen and (min-width: 992px) {
+      margin-top: 200px;
+    }
+
+
 
     a {
       color: #6B6B6B;
       font-weight: 500;
     }
+
+
   }
 
   //.footer__copyright
@@ -100,6 +113,11 @@
   display: flex;
   justify-content: center;
   gap: 60px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 
   //.nav-footer__inner
   &__inner {

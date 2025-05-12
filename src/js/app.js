@@ -8,6 +8,7 @@ const  swipes_slider = new Swiper('.slider__swiper', {
     el: '.swiper-pagination',
     dynamicBullets: true,
   },
+
 });
 
 const catalog_slider = new Swiper('.catalog-slider__swiper', {
@@ -22,7 +23,7 @@ const catalog_slider = new Swiper('.catalog-slider__swiper', {
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20
     },
     // when window width is >= 480px
@@ -38,9 +39,9 @@ const catalog_slider = new Swiper('.catalog-slider__swiper', {
   }
 });
 
-const lenis = new Lenis({
-  autoRaf: true,
-});
+// const lenis = new Lenis({
+//   autoRaf: true,
+// });
 
 window.addEventListener('scroll', () => {
   const menuPosition = window.scrollY;

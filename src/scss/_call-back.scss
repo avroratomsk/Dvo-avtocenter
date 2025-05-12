@@ -16,10 +16,18 @@
 
   //.callback__body
   &__body {
+
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
   }
 
   //.callback__title
   &__title {
+    @media screen and (max-width: 768px) {
+      font-size: 35px;
+      text-align: center;
+    }
   }
 
   //.callback__form

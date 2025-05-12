@@ -1387,6 +1387,7 @@ template {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  display: none;
 }
 
 .header--fixed {
@@ -1641,10 +1642,12 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
+  margin-top: 50px;
   padding: 50px 0px;
   border-top: 1px solid #6B6B6B;
-  margin-top: 200px;
   color: #6B6B6B;
 }
 
@@ -1850,6 +1853,8 @@ template {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .stock__name {
@@ -1860,6 +1865,8 @@ template {
   font-weight: 500;
   line-height: 150%;
   text-decoration-line: underline;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .stock__link-wrp {
@@ -1887,6 +1894,13 @@ template {
   font-weight: 400;
   line-height: 140%;
   color: #000000;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.stock__link img {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .callback {
@@ -4906,6 +4920,10 @@ body main {
 }
 
 @media screen and (min-width: 992px) {
+  .footer__bottom {
+    margin-top: 200px;
+  }
+
   .callback {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6852,6 +6870,43 @@ body main {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .footer__row {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+
+  .callback__body {
+    margin-top: 30px;
+  }
+
+  .callback__title {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .form__grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form__label {
+    display: none;
+  }
+}
+
 @media print {
   .d-print-inline {
     display: inline !important;
@@ -6978,5 +7033,19 @@ body main {
   .catalog-slider .swiper-button-next:hover::after,
   .catalog-slider .swiper-button-prev:hover::after {
     color: #EF2626;
+  }
+
+  .stock__image img:hover {
+    opacity: 0.8;
+  }
+
+  .stock__name:hover {
+    text-decoration: none;
+  }
+
+  .stock__link:hover img {
+    -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
