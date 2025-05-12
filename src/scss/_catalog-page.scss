@@ -1,0 +1,56 @@
+.catalog-page {
+  padding-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 30px;
+  }
+
+
+  //.catalog-page__inner
+  &__inner {
+  }
+
+  //.catalog-page__title
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  //.catalog-page__grid
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+    gap: 40px;
+  }
+
+  //.catalog-page__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  //.catalog-page__company
+  &__company {
+  }
+
+  //.catalog-page__image
+  &__image {
+  }
+
+  //.catalog-page__title-card
+  &__title-card {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  //.catalog-page__descr
+  &__descr {
+    text-align: center;
+
+  }
+
+
+}

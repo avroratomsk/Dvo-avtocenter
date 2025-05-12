@@ -20,6 +20,8 @@
 @import '_about';
 @import '_form';
 @import '_map';
+@import '_catalog-page';
+@import '_breadcrumbs';
 
 * {
   outline: none;
@@ -39,6 +41,11 @@ a {
 
 img, picture {
   display: block;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
 }
 
 p {
