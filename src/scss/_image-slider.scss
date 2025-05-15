@@ -1,0 +1,22 @@
+.image-slider {
+  padding: 50px 0px;
+
+  //.image-slider__slider
+  &__slider {
+  }
+
+  //.image-slider__wrapper
+  &__wrapper{}
+
+  //.image-slider__slide
+  &__slide{
+    width: 100%;
+
+
+    img {
+      width: 100%;
+      height: 341px;
+      object-fit: cover;
+    }
+  }
+}

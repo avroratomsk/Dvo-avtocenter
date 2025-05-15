@@ -1,0 +1,49 @@
+.populate {
+
+  //.populate__title
+  &__title {
+  }
+
+  //.populate__grid
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+  }
+
+  //.populate__item
+  &__item {
+  }
+
+  //.populate__name
+  &__name {
+  }
+
+  //.populate__image
+  &__image {
+  }
+
+  //.populate__price
+  &__price {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    p:nth-child(2) {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 29px;
+    }
+  }
+
+  //.populate__btn
+  &__btn {
+  }
+
+
+}

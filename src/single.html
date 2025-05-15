@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
-    @@include('html/head.html', {
-        "title":"Сборка GULP"
-    })
-    <body>
-        @@include('html/_header.html')
+@@include('html/head.html', {
+"title":"Сборка GULP"
+})
+<body>
+@@include('html/_header.html')
 
-        <main>
-            @@include('html/_product-page.html')
-            @@include('html/_about.html')
-        </main>
+<main>
+  @@include('html/_product-page.html')
+  @@include('html/_image-slider.html')
+  @@include('html/_populate.html')
 
-        @@include('html/_footer.html')
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
-        <script src="js/app.min.js"></script>
-    </body>
+</main>
+
+@@include('html/_footer.html')
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+<script src="js/app.min.js"></script>
+
+<script>
+  const imageSlider = new Swiper('.image-slider__slider', {
+    loop: true,
+    slidesPerView: 3.5,
+    spaceBetween: 12,
+  });
+</script>
+</body>
 </html>
