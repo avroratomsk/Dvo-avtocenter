@@ -19,3 +19,23 @@
     padding: 30px 0px;
   }
 }
+
+.btn{
+  width: 100%;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+
+  &--red {
+    color: #ffffff;
+    background: #EF2626;
+    border: 1px solid #EF2626;
+  }
+
+  &--white {
+    color: #000000;
+    border: 1px solid rgba(98, 98, 98, 0.45);
+    background: rgb(255, 255, 255);
+  }
+}

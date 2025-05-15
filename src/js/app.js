@@ -59,3 +59,20 @@ window.addEventListener('scroll', () => {
     document.documentElement.style.paddingTop = "0px"
   }
 })
+
+const colorsBtn = document.querySelectorAll('.colors__color');
+
+colorsBtn?.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    colorsBtn.forEach((color) => {color.classList.remove('_active');});
+    btn.classList.add('_active');
+    const dataImage = btn.dataset.image;
+
+    const image = document.getElementById('product-image');
+
+    image.src = dataImage;
+    const pictureSource = image.previousElementSibling;
+    pictureSource.srcset = dataImage;
+
+  })
+})
