@@ -3,7 +3,7 @@ import * as functions from './modules/baseFunctions.js';
 // import Swiper from 'swiper/bundle';
 
 functions.isWebp();
-
+import './modules/popup/popup.js';
 
 
 
@@ -65,16 +65,14 @@ const catalog_slider = new Swiper('.catalog-slider__swiper', {
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20
     },
-    // when window width is >= 480px
-    480: {
+    640: {
       slidesPerView: 3,
       spaceBetween: 24
     },
-    // when window width is >= 640px
-    640: {
+    992: {
       slidesPerView: 4,
       spaceBetween: 24
     }
