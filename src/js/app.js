@@ -117,3 +117,12 @@ const sliderInfo = new Swiper('.slider-info__slider', {
   },
 });
 
+const burger = document.getElementById("burger");
+burger.addEventListener("click", () => {
+  document.querySelector('.header-mb').classList.add('_active');
+})
+
+const close = document.getElementById("close");
+close.addEventListener("click", () => {
+  document.querySelector('.header-mb').classList.remove('_active');
+})

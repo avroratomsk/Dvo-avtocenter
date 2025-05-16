@@ -2584,6 +2584,12 @@ template {
   z-index: 100;
 }
 
+.header-mb._active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header-mb__link {
   display: block;
   padding: 10px 0px;
