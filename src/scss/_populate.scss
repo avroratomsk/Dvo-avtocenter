@@ -19,11 +19,19 @@
 
   //.populate__name
   &__name {
+    color: #000000;
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
     text-transform: uppercase;
     margin-bottom: 50px;
+    transition: $animation-speed;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   //.populate__image

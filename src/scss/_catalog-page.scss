@@ -32,10 +32,21 @@
 
   //.catalog-page__company
   &__company {
+
   }
 
   //.catalog-page__image
   &__image {
+
+    img {
+      transition: $animation-speed;
+
+      @media (hover: hover) {
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
   }
 
   //.catalog-page__title-card
@@ -44,6 +55,13 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
+    transition: $animation-speed;
+
+    @media(hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
   }
 
   //.catalog-page__descr

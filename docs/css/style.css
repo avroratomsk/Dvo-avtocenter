@@ -1631,6 +1631,8 @@ template {
   font-weight: 700;
   color: #EF2626;
   text-decoration: underline;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .footer__bottom {
@@ -1667,6 +1669,16 @@ template {
   gap: 5px;
 }
 
+.footer__author a {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.footer__privacy {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
 .nav-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1695,6 +1707,8 @@ template {
   font-size: 13px;
   font-weight: 400;
   line-height: 120%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .slider {
@@ -2082,11 +2096,18 @@ template {
   gap: 15px;
 }
 
+.catalog-page__image img {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
 .catalog-page__title-card {
   color: #000000;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .catalog-page__descr {
@@ -2266,6 +2287,11 @@ template {
 
 .contact {
   margin-bottom: 60px;
+  margin-top: 50px;
+}
+
+.contact__title {
+  margin-bottom: 0px;
 }
 
 .contact__btns {
@@ -2342,6 +2368,8 @@ template {
 
 .contact__info a {
   color: #EF2626;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .contact__info span {
@@ -2459,11 +2487,14 @@ template {
 }
 
 .populate__name {
+  color: #000000;
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
   text-transform: uppercase;
   margin-bottom: 50px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .populate__image {
@@ -8048,6 +8079,22 @@ body main {
     background: rgba(0, 0, 0, 0.03);
   }
 
+  .footer .info-item a:hover {
+    color: #000000;
+  }
+
+  .footer__author a:hover {
+    color: #EF2626;
+  }
+
+  .footer__privacy:hover {
+    color: #EF2626;
+  }
+
+  .nav-footer__link:hover {
+    color: #EF2626;
+  }
+
   .btn--red:hover {
     color: #000000;
     border: 1px solid rgba(98, 98, 98, 0.45);
@@ -8105,9 +8152,25 @@ body main {
     background: none;
   }
 
+  .catalog-page__image img:hover {
+    opacity: 0.8;
+  }
+
+  .catalog-page__title-card:hover {
+    color: #EF2626;
+  }
+
   .colors__color:hover {
     -webkit-box-shadow: 0px 0px 4px 0px rgb(163, 163, 163);
             box-shadow: 0px 0px 4px 0px rgb(163, 163, 163);
+  }
+
+  .contact__info a:hover {
+    color: #000000;
+  }
+
+  .populate__name:hover {
+    text-decoration: underline;
   }
 
   .slider-info__next:hover {
