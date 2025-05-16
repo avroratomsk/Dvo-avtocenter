@@ -30,16 +30,50 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
+  transition: $animation_speed;
 
   &--red {
     color: #ffffff;
     background: #EF2626;
     border: 1px solid #EF2626;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #000000;
+        border: 1px solid rgba(98, 98, 98, 0.45);
+        background: rgb(255, 255, 255);
+      }
+    }
   }
 
   &--white {
     color: #000000;
     border: 1px solid rgba(98, 98, 98, 0.45);
     background: rgb(255, 255, 255);
+
+    @media (hover: hover) {
+      &:hover {
+        color: #ffffff;
+        background: #EF2626;
+        border: 1px solid #EF2626;
+      }
+    }
   }
+}
+
+.burger {
+  color: #ffffff;
+  font-size: 20px;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffffff;
+  padding: 10px;
 }

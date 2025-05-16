@@ -11,22 +11,22 @@ functions.isWebp();
 //   autoRaf: true,
 // });
 
-window.addEventListener('scroll', () => {
-  const menuPosition = window.scrollY;
+window.addEventListener('DOMContentLoaded', () => {
   const menuElem = document.querySelector('.header-bottom__inner');
-  const topPositionMenuElem = menuElem.getBoundingClientRect().top;
   const headerBottomElem = document.querySelector('.header-bottom');
-  const headerBottomElemHeight = headerBottomElem.getBoundingClientRect().height;
+  const menuOffsetTop = menuElem.offsetTop; // Положение от верха документа
+  const headerHeight = headerBottomElem.offsetHeight;
 
-
-  if (menuPosition > topPositionMenuElem) {
-    headerBottomElem.classList.add('header--fixed');
-    document.documentElement.style.paddingTop = headerBottomElemHeight + "px"
-  }else {
-    headerBottomElem.classList.remove('header--fixed');
-    document.documentElement.style.paddingTop = "0px"
-  }
-})
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= menuOffsetTop) {
+      headerBottomElem.classList.add('header--fixed');
+      document.body.style.paddingTop = `${headerHeight}px`;
+    } else {
+      headerBottomElem.classList.remove('header--fixed');
+      document.body.style.paddingTop = '0px';
+    }
+  });
+});
 
 const colorsBtn = document.querySelectorAll('.colors__color');
 
@@ -84,6 +84,7 @@ const catalog_slider = new Swiper('.catalog-slider__swiper', {
 const imageSlider = new Swiper('.image-slider__slider', {
   loop: true,
   spaceBetween: 12,
+  grabCursor: true,
 
   breakpoints: {
     320: {
@@ -114,6 +115,5 @@ const sliderInfo = new Swiper('.slider-info__slider', {
     nextEl: '.slider-info__next',
     prevEl: '.slider-info__prev',
   },
-
-
 });
+
