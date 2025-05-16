@@ -12,22 +12,22 @@
   />
   <title>Сборка GULP</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250516145104"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250516163652"
         rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css?_v=20250516145104"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css?_v=20250516163652"/>
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250516145104"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250516163652"
   />
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250516145104"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250516163652"
   />
 
 
   <link
     rel="stylesheet"
-    href="css/style.min.css?_v=20250516145104"
+    href="css/style.min.css?_v=20250516163652"
   />
 
   <!-- https://realfavicongenerator.net -->
@@ -69,7 +69,7 @@
     <div class="container">
       <div class="header-top__inner">
         <div class="header-top__left">
-          <div class="header-top__socials">
+          <div class="header-top__socials socials">
             <a href="#"><picture><source srcset="img/wh.webp" type="image/webp"><img src="img/wh.png" alt=""></picture></a>
             <a href="#"><picture><source srcset="img/vk.webp" type="image/webp"><img src="img/vk.png" alt=""></picture></a>
             <a href="#"><picture><source srcset="img/tg.webp" type="image/webp"><img src="img/tg.png" alt=""></picture></a>
@@ -193,14 +193,14 @@
             <p class="contact__info"><a href="">+7 (999) 999-99-99</a></p>
           </div>
           <div class="socials">
-            <a href=""><picture><source srcset="img/wh.webp" type="image/webp"><img src="img/wh.png" alt=""></picture></a>
-            <a href=""><picture><source srcset="img/vk.webp" type="image/webp"><img src="img/vk.png" alt=""></picture></a>
-            <a href=""><picture><source srcset="img/tg.webp" type="image/webp"><img src="img/tg.png" alt=""></picture></a>
+            <a href="" class="socials__link"><picture><source srcset="img/wh.webp" type="image/webp"><img src="img/wh.png" alt=""></picture></a>
+            <a href="" class="socials__link"><picture><source srcset="img/vk.webp" type="image/webp"><img src="img/vk.png" alt=""></picture></a>
+            <a href="" class="socials__link"><picture><source srcset="img/tg.webp" type="image/webp"><img src="img/tg.png" alt=""></picture></a>
           </div>
         </div>
         <div class="contact__btns">
-          <button class="btn btn--red">Связаться с продавцом</button>
-          <button class="btn btn--white">Оставить заявку</button>
+          <button class="btn btn--red" data-popup="salesman">Связаться с продавцом</button>
+          <button class="btn btn--white" data-popup="callback">Оставить заявку</button>
         </div>
       </div>
       <div class="contact__right">
@@ -271,9 +271,9 @@
           <div class="footer__phone info-item"><span>Телефон: </span><a href="tel:+79999999999">+7 (999) 999-99-99</a></div>
           <div class="footer__email info-item"><span>Email: </span><a href="mailto:isuzuprimorie@iszuzu.ru">isuzuprimorie@iszuzu.ru</a></div>
           <div class="footer__socials socials">
-            <a href="#" class="solicals__link"><picture><source srcset="img/wh-red.webp" type="image/webp"><img src="img/wh-red.png" alt=""></picture></a>
-            <a href="#" class="solicals__link"><picture><source srcset="img/vk-red.webp" type="image/webp"><img src="img/vk-red.png" alt=""></picture></a>
-            <a href="#" class="solicals__link"><picture><source srcset="img/tg-red.webp" type="image/webp"><img src="img/tg-red.png" alt=""></picture></a>
+            <a href="#" class="socials__link"><picture><source srcset="img/wh-red.webp" type="image/webp"><img src="img/wh-red.png" alt=""></picture></a>
+            <a href="#" class="socials__link"><picture><source srcset="img/vk-red.webp" type="image/webp"><img src="img/vk-red.png" alt=""></picture></a>
+            <a href="#" class="socials__link"><picture><source srcset="img/tg-red.webp" type="image/webp"><img src="img/tg-red.png" alt=""></picture></a>
           </div>
         </div>
       </div>
@@ -285,8 +285,56 @@
     </div>
   </div>
 </div>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20250516145104"></script>
-        <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js?_v=20250516145104"></script>
-        <script src="js/app.min.js?_v=20250516145104"></script>
+        <div id="send-request" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__top">
+        <button data-close type="button" class="popup__close close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <h2 class="popup__title">Оставить заявку</h2>
+      <form action="" class="popup__form form" method="POST" id="reviews-form">
+        <input type="text" name="name" class="form__inp" placeholder="Ваше имя" required/>
+        <input type="tel" name="phone" class="form__inp" placeholder="номер телефона" required data-tel-input/>
+        <input type="text" name="product" id="order-product" class="form__inp form__input--hidden"/>
+        <button type="submit" class="form__submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="callback" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__top">
+        <button data-close type="button" class="popup__close close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <h2 class="popup__title">Обратный звонок</h2>
+      <form action="" class="popup__form form" method="POST" id="callback-form">
+        <input type="text" name="name" class="form__inp" placeholder="Ваше имя" required/>
+        <input type="tel" name="phone" class="form__inp" placeholder="номер телефона" required data-tel-input/>
+        <button type="submit" class="form__submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="salesman" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__top">
+        <button data-close type="button" class="popup__close close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <h2 class="popup__title">Связаться с продавцом</h2>
+      <form action="" class="popup__form form" method="POST">
+        <input type="text" name="name" class="form__inp" placeholder="Ваше имя" required/>
+        <input type="tel" name="phone" class="form__inp" placeholder="номер телефона" required data-tel-input/>
+        <button type="submit" class="form__submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20250516163652"></script>
+        <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js?_v=20250516163652"></script>
+        <script src="js/app.min.js?_v=20250516163652"></script>
     </body>
 </html>

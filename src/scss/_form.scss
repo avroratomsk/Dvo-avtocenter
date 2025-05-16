@@ -55,5 +55,15 @@
     font-size: 14px;
     font-weight: 600;
     background: rgb(239, 38, 38);
+    border: 1px solid $accent;
+    transition: $animation-speed;
+
+    @media (hover:hover) {
+      &:hover {
+        color: #000;
+        border: 1px solid rgba(98, 98, 98, .45);
+        background: none;
+      }
+    }
   }
 }

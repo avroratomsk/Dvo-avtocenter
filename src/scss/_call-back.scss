@@ -60,5 +60,12 @@
 
   //.socials__link
   &__link {
+    transition: $animation_speed;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
   }
 }

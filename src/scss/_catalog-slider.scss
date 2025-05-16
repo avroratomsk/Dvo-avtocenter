@@ -21,6 +21,13 @@
     line-height: 20px;
     text-transform: uppercase;
     margin-bottom: 12px;
+    transition: $animation-speed;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   //.catalog-slider__image

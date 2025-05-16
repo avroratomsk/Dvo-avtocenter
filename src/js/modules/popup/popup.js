@@ -4,7 +4,6 @@ import { bodyLock, bodyUnLock } from "../baseFunctions.js";
 const openPopup = (e) => {
   bodyLock();
   const currentPopup = document.getElementById(e.currentTarget.dataset.popup);
-  console.log(currentPopup)
   currentPopup.classList.add("popup_show");
 
   const hiddenField = currentPopup.querySelector("#order-product");

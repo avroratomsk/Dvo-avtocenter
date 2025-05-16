@@ -1,20 +1,15 @@
-{% load static %}
-<div id="leave-request" class="popup">
+<div id="send-request" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
       <div class="popup__top">
-        <button data-close type="button" class="popup__close close"></button>
-      </div>
-      <div class="popup__loading">
-        <img src="{% static 'theme/mb/images/loading.gif' %}" alt="Загрузка" title="Загрузка"/>
+        <button data-close type="button" class="popup__close close"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <h2 class="popup__title">Оставить заявку</h2>
       <form action="" class="popup__form form" method="POST" id="reviews-form">
-        {% csrf_token %}
-        <input type="text" name="name" class="form__input" placeholder="Ваше имя" required/>
-        <input type="tel" name="phone" class="form__input" placeholder="номер телефона" required data-tel-input/>
-        <input type="text" name="product" id="order-product" class="form__input form__input--hidden"/>
-        <button type="submit" class="form__button">Отправить</button>
+        <input type="text" name="name" class="form__inp" placeholder="Ваше имя" required/>
+        <input type="tel" name="phone" class="form__inp" placeholder="номер телефона" required data-tel-input/>
+        <input type="text" name="product" id="order-product" class="form__inp form__input--hidden"/>
+        <button type="submit" class="form__submit">Отправить</button>
       </form>
     </div>
   </div>
@@ -24,49 +19,30 @@
   <div class="popup__wrapper">
     <div class="popup__content">
       <div class="popup__top">
-        <button data-close type="button" class="popup__close close"></button>
-      </div>
-      <div class="popup__loading">
-        <img src="{% static 'theme/mb/images/loading.gif' %}" alt="Загрузка" title="Загрузка"/>
+        <button data-close type="button" class="popup__close close"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <h2 class="popup__title">Обратный звонок</h2>
       <form action="" class="popup__form form" method="POST" id="callback-form">
-        {% csrf_token %}
-        <input type="text" name="name" class="form__input" placeholder="Ваше имя" required/>
-        <input type="tel" name="phone" class="form__input" placeholder="номер телефона" required data-tel-input/>
-        <button type="submit" class="form__button">Отправить</button>
+        <input type="text" name="name" class="form__inp" placeholder="Ваше имя" required/>
+        <input type="tel" name="phone" class="form__inp" placeholder="номер телефона" required data-tel-input/>
+        <button type="submit" class="form__submit">Отправить</button>
       </form>
     </div>
   </div>
 </div>
 
-<div id="contact" class="popup">
+<div id="salesman" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
       <div class="popup__top">
-        <button data-close type="button" class="popup__close close"></button>
+        <button data-close type="button" class="popup__close close"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="popup__contact">
-        {% if offices %}
-        {% for office in offices %}
-        <div class="contact-address__card">
-          <p class="contact-address__name">{{ office.name }}</p>
-          <p class="contact-address__address">{{ office.address }}</p>
-          <a href="tel:{{ office.phone }}" class="contact-address__phone">{{ office.phone }}</a>
-          <p class="contact-address__work-time">{{ office.time_work }}</p>
-        </div>
-        {% endfor %}
-        {% endif %}
-      </div>
+      <h2 class="popup__title">Связаться с продавцом</h2>
+      <form action="" class="popup__form form" method="POST">
+        <input type="text" name="name" class="form__inp" placeholder="Ваше имя" required/>
+        <input type="tel" name="phone" class="form__inp" placeholder="номер телефона" required data-tel-input/>
+        <button type="submit" class="form__submit">Отправить</button>
+      </form>
     </div>
   </div>
 </div>
-
-<!--<div id="success" class="notification">-->
-<!--  <div class="notification__content">-->
-<!--    <div class="notification__success-image">-->
-<!--      <img src="{% static 'theme/mb/images/tick.png' %}" alt="Обратный звонок" title="Обратный звонок"/>-->
-<!--    </div>-->
-<!--    <p class="notification__success-text">Успешно</p>-->
-<!--  </div>-->
-<!--</div>-->

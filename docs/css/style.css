@@ -1798,6 +1798,8 @@ template {
   line-height: 20px;
   text-transform: uppercase;
   margin-bottom: 12px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .catalog-slider__image img {
@@ -1965,6 +1967,11 @@ template {
   gap: 12px;
 }
 
+.socials__link {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
 .about__content {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
@@ -2041,6 +2048,9 @@ template {
   font-size: 14px;
   font-weight: 600;
   background: rgb(239, 38, 38);
+  border: 1px solid #EF2626;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .catalog-page {
@@ -2633,11 +2643,12 @@ body::after {
   -webkit-transition: opacity 0.8s ease 0s;
   transition: opacity 0.8s ease 0s;
   pointer-events: none;
-  z-index: 98;
+  z-index: 100;
 }
 
 body._lock::after {
-  opacity: 1;
+  opacity: 1 !important;
+  pointer-events: all;
 }
 
 ._lock {
@@ -2737,7 +2748,7 @@ body._lock::after {
   margin-bottom: 24px;
   text-align: center;
   color: black;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 300;
   line-height: 150%;
 }
@@ -2780,6 +2791,10 @@ body._lock::after {
 .popup__loading img {
   width: 40px;
   height: 40px;
+}
+
+.popup__close {
+  color: #EF2626;
 }
 
 .popup__contact {
@@ -8045,6 +8060,10 @@ body main {
     border: 1px solid #EF2626;
   }
 
+  .catalog-slider__name:hover {
+    text-decoration: underline;
+  }
+
   .catalog-slider__btn:hover {
     background: transparent;
     color: #EF2626;
@@ -8072,6 +8091,18 @@ body main {
     -webkit-transform: translateX(10px);
         -ms-transform: translateX(10px);
             transform: translateX(10px);
+  }
+
+  .socials__link:hover {
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+
+  .form__submit:hover {
+    color: #000;
+    border: 1px solid rgba(98, 98, 98, 0.45);
+    background: none;
   }
 
   .colors__color:hover {
