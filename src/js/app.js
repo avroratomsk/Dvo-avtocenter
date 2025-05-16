@@ -44,3 +44,40 @@ colorsBtn?.forEach((btn) => {
 
   })
 })
+
+const imageSlider = new Swiper('.image-slider__slider', {
+  loop: true,
+  spaceBetween: 12,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.3,
+      spaceBetween: 20
+    },
+    480: {
+      slidesPerView: 2.4,
+      spaceBetween: 30
+    },
+    992: {
+      slidesPerView: 2.5,
+      spaceBetween: 40
+    },
+    1024: {
+      slidesPerView: 3.5,
+      spaceBetween: 40
+    }
+  }
+});
+
+const sliderInfo = new Swiper('.slider-info__slider', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 12,
+
+  navigation: {
+    nextEl: '.slider-info__next',
+    prevEl: '.slider-info__prev',
+  },
+
+
+});
