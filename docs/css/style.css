@@ -1818,6 +1818,8 @@ template {
 
 .catalog-slider__image img {
   max-width: 100%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .catalog-slider__price {
@@ -8109,6 +8111,10 @@ body main {
 
   .catalog-slider__name:hover {
     text-decoration: underline;
+  }
+
+  .catalog-slider__image img:hover {
+    opacity: 0.8;
   }
 
   .catalog-slider__btn:hover {

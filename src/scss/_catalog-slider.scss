@@ -35,6 +35,13 @@
 
     img {
       max-width: 100%;
+      transition: $animation-speed;
+
+      @media(hover: hover) {
+        &:hover {
+          opacity: .8;
+        }
+      }
     }
   }
 
