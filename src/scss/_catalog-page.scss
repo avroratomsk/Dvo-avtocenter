@@ -32,13 +32,21 @@
 
   //.catalog-page__company
   &__company {
-
+    height: 59px;
+    img {
+      width: 65px;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   //.catalog-page__image
   &__image {
 
     img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
       transition: $animation-speed;
 
       @media (hover: hover) {

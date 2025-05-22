@@ -124,3 +124,11 @@ const close = document.getElementById("close");
 close.addEventListener("click", () => {
   document.querySelector('.header-mb').classList.remove('_active');
 })
+
+const fullCharBtn = document.querySelector(".product-page__full-char");
+fullCharBtn?.addEventListener("click", (e) => {
+  const listCharParent = document.querySelector(".product-page__characteristics");
+  const listChar = listCharParent.querySelector("ul");
+
+  listChar.style.height = "auto"
+})
