@@ -79,6 +79,34 @@
 }
 
 .text {
+
+  h1,h2,h3,h4,h5,h6 {
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+  ul,ol {
+    margin-left: 20px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 150%;
+
+
+      &::before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: #D72F2F;
+        border-radius: 50%;
+      }
+    }
+  }
+
   p {
     font-weight: 500;
     font-size: 16px;
