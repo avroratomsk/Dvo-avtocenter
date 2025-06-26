@@ -33,6 +33,7 @@
   //.catalog-page__company
   &__company {
     height: 59px;
+
     img {
       width: 65px;
       height: auto;
@@ -78,5 +79,9 @@
 
   }
 
+  //.catalog-page__text
+  &__text {
+    margin-top: 70px;
+  }
 
 }
