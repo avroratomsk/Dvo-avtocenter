@@ -108,6 +108,7 @@ const sliderInfo = new Swiper('.slider-info__slider', {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 12,
+  autoHeight: true,
 
   navigation: {
     nextEl: '.slider-info__next',
@@ -130,5 +131,5 @@ fullCharBtn?.addEventListener("click", (e) => {
   const listCharParent = document.querySelector(".product-page__characteristics");
   const listChar = listCharParent.querySelector("ul");
 
-  listChar.style.height = "auto"
+  listChar.classList.toggle("active")
 })
