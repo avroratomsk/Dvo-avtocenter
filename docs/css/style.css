@@ -1847,6 +1847,10 @@ template {
   margin-bottom: 15px;
 }
 
+.text img {
+  max-width: 100%;
+}
+
 .catalog-slider__swiper {
   margin-top: 25px;
 }
