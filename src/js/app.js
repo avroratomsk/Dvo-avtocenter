@@ -133,3 +133,19 @@ fullCharBtn?.addEventListener("click", (e) => {
 
   listChar.classList.toggle("active")
 })
+
+const colorsBtn = document.querySelectorAll(".colors__color");
+const colorOrders = document.querySelectorAll(".colors__order");
+
+const viewsColorText = (e) => {
+  colorsBtn?.forEach(color => color.classList.remove("_active"));
+  colorOrders?.forEach((order) => order.classList.remove("_active"));
+
+  e.currentTarget.classList.add("_active");
+  const colorOrder = e.currentTarget.querySelector(".colors__order")
+  colorOrder.classList.toggle("_active");
+}
+
+colorsBtn?.forEach(btn => {
+  btn.addEventListener("click", viewsColorText);
+})

@@ -2434,6 +2434,10 @@ template {
           transform: rotate(0deg);
 }
 
+.colors__order._active {
+  display: block;
+}
+
 .contact {
   margin-bottom: 60px;
   margin-top: 50px;
