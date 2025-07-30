@@ -1851,6 +1851,15 @@ template {
   max-width: 100%;
 }
 
+input[data-order-product] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .catalog-slider__swiper {
   margin-top: 25px;
 }
